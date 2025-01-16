@@ -10,13 +10,17 @@ class Persona(var peso: Double, var altura: Double) {
     fun saludar(): String{
         return "Hola $nombre!"
     }
+    companion object{
+        const val ALTURA_MEDIA: Double = 1.75
+        const val PESO_MEDIO: Double = 70.0
 
+    }
     fun alturaEncimaMedia(): Boolean{
-        return if (altura >= 1.75) true else false
+        return if (altura >= ALTURA_MEDIA) true else false
     }
 
     fun pesoEncimaMedia(): Boolean{
-        return if (peso >= 70) true else false
+        return if (peso >= PESO_MEDIO) true else false
     }
 
     fun obtenerDesc(): String{
